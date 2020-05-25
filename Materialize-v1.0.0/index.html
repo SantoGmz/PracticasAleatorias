@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    
+</head>
+<body>
+    <nav class="nav-extended red darken-1">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Sotnas - Santos</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">S4N70</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
+        </div>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="#test1">Inicio</a></li>
+            <li class="tab active"><a class="active" href="#test2">Pruebas</a></li>
+            <li class="tab disabled"><a href="#test3">Tab desabilidata</a></li>
+            <li class="tab"><a href="#test4">Test 4</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col s6">
+                <form action="#">
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Apellido">
+                    <input type="text" placeholder="Correo">
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s1 red">1</div>
+            <div class="col s1 blue">1</div>
+            <div class="col s1 indigo">1</div>
+            <div class="col s1 purple">1</div>
+            <div class="col s1 yellow">1</div>
+            <div class="col s1 ">1</div>
+            <div class="col s1 orange">1</div>
+            <div class="col s1 grey">1</div>
+            <div class="col s1 cyan">1</div>
+            <div class="col s1 blue-grey darken-1">21</div>
+            <div class="col s1 ">1</div>
+            <div class="col s1 ">1</div>
+        </div>
+
+        <div class="row">
+            <div class="col m6 s6 l6">
+                <a class="waves-effect waves-yellow btn indigo">Boton</a>
+                <a class="waves-effect waves-teal blue btn-flat btn-">Boton</a>
+                <a class="waves-effect waves-teal red btn-flat btn-">Boton</a>
+                <a class="waves-effect waves-teal orange btn-flat btn-">Boton</a>
+            </div>
+            <div class="col m6 s6 l6">
+                <a class="waves-effect  waves-teal yellow btn-flat btn-">Boton</a>
+                <a class="waves-effect waves-teal cyan btn-flat btn-">Boton</a>
+                <a class="waves-effect waves-teal purple btn-flat btn-">Boton</a>
+                <a class="waves-effect waves-teal indigo btn-flat btn-">Boton</a>
+                <a class="waves-effect waves-teal blue btn-flat btn- pulse">Boton</a>
+
+            </div>
+                    
+                </div>
+        <div class="row">
+            <blockquote>
+                Notas Futuras
+                
+              </blockquote>           
+            
+            <a class="btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a>
+
+
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Mis planes</span>
+                  <p>Planeo ser el mejor en lo que quiero ser sin importar lo difícil que sea, ni obstáculos en medio.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!--Footer-->
+    <footer class="page-footer blue-grey darken-1">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Contenido del Footer</h5>
+              <p class="grey-text text-lighten-4">Enserio, Seré el mejor.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2019-2021 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">Más Links</a>
+          </div>
+        </div>
+      </footer>
+    <script src="js/materialize.min.js"></script>
+    <script>
+
+      let miObjeto = [
+        {
+        nombre:"santos",
+        Apellido: "Severino",
+        fechaNacimiento:"11/09/1999"
+        
+        },{
+        nombre:"Karla",
+        Apellido:"Garcia",
+        fechaNacimiento:"10/nov/2001"
+        }
+        ,{
+        nombre:"Jhon",
+        Apellido:"Smith",
+        fechaNacimiento:"10/nov/2001"
+        }
+      ];
+      for (let index = 0; index < miObjeto.length; index++) {
+        console.log(miObjeto[index].nombre);
+        
+      }
+      
+    </script>
+</body>
+</html>

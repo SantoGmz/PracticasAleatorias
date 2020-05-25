@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="btn" value="Crear">
+
+    
+    
+    <input type="text" id="tecla">
+    
+    <div id="contenedor">fafa</div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(function () {
+
+            let btn = document.querySelector("#btn");
+
+            btn.addEventListener("click", (event) => {
+
+                let elemento = document.createElement("p");
+                elemento.setAttribute("class", "suClase")
+
+                elemento.innerHTML=
+                `Oye <a href="#">papa</a> estas aprendiendo, Cada vez eres mejor, Solo confia y comete errores
+                <a href="#" name="delete" class="btn btn-danger">borrar</a>
+                `;
+
+                
+
+                let contenedor = document.querySelector("#contenedor");
+                contenedor.appendChild(elemento);
+                console.log(elemento);
+
+                console.log(event.target)
+
+
+            });
+            
+            //Delegar el evento click al enlace dinamico
+
+            ///a.btn-danger
+            $('#contenedor').on("click", "a.btn-danger", (event)=>{
+                console.dir(event.target);
+                const enlace = $(event.target);
+                console.dir(enlace)
+
+                //Eliminacion con jQuery
+                //enlace.parent().remove();
+
+                //Eliminacion con Javascript
+                const link = event.target;
+                link.parentElement.remove();
+
+            })
+
+            ///ejercicio2 
+            //const tecla = document.querySelector('#tecla');
+            const tecla = $('#tecla');
+
+            //tecla.addEventListener('click', function(){});
+            tecla.on('keyup', (event)=>{
+                    //keyCode para ver codigo ascii
+               console.log(event.keyCode);
+                
+                if(event.keyCode ===13){
+                    //val() para borrar o crear/insertar un contenido fijo
+                    //console.log(tecla.val());
+
+                    let contenedor = $('#contenedor');
+                    console.log(contenedor.textContent)
+
+
+
+
+
+
+                }if(event.keyCode=== 27){
+                    tecla.val("");
+                }
+            
+                
+
+
+            })
+ 
+
+        });
+
+  
+    </script>
+</body>
+
+</html>

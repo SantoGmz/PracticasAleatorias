@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="stilo.css">
+    <title>JS-POO</title>
+
+    <style>
+        body, h1 {
+            transition: ease-in 0.3s;
+        }
+    </style>
+</head>
+
+<body id="cuerpo">
+    <div class="container-fluid text-center" id="botones">
+        <h1>Colores de para el fondo</h1>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script>
+        let bajaDelNavegador =localStorage.getItem('color');
+        
+        $(function () {
+            
+            class VistaUsuario {
+
+                colorDeFondo(x) {
+                    let subeAlNavegador =localStorage.setItem('color', `${x}`);
+                            if (x == 'bg-dark') {
+                            $('#cuerpo').removeClass();
+                            $('#cuerpo').addClass(`${x}`);
+                            $('h1').css('color', 'white');
+                            subeAlNavegador =localStorage.setItem('color',`${x}`);
+
+                        }
+                        if (x == 'bg-light' || x == 'bg-warning') {
+                            $('#cuerpo').removeClass();
+                            $('#cuerpo').addClass(`${x}`);
+                            $('h1').css('color', 'black');
+                            subeAlNavegador =localStorage.setItem('color',`${x}`);
+
+                        } else {
+                            $('#cuerpo').removeClass();
+                            $('#cuerpo').addClass(`${x}`);
+                            $('h1').css('color', 'white');
+                            subeAlNavegador =localStorage.setItem('color',`${x}`);
+
+                    };
+
+
+
+
+
+                };
+
+                botones(clase, id, textoHTML) {
+                    let cuerpo = document.querySelector('#botones');
+                    let creaBoton = document.createElement('button');
+                    creaBoton.setAttribute('class', `${clase}`);
+                    creaBoton.setAttribute('type', 'button');
+                    creaBoton.setAttribute('id', `${id}`);
+                    creaBoton.innerHTML = `${textoHTML}`;
+                    cuerpo.appendChild(creaBoton);
+                };
+            };
+
+            let muestra = new VistaUsuario();
+
+            muestra.colorDeFondo(bajaDelNavegador);
+
+            muestra.botones('btn btn-primary mr-3', 'btn-azul', 'Primary');
+            muestra.botones('btn btn-secondary mr-3', 'btn-gris', 'Secondary');
+            muestra.botones('btn btn-success mr-3', 'btn-verde', 'Success');
+            muestra.botones('btn btn-danger mr-3', 'btn-rojo', 'Danger');
+            muestra.botones('btn btn-warning mr-3', 'btn-amarillo', 'Warning');
+            muestra.botones('btn btn-info mr-3', 'btn-azul2', 'info');
+            muestra.botones('btn btn-light mr-3', 'btn-claro', 'Light');
+            muestra.botones('btn btn-dark mr-3', 'btn-oscuro', 'Dark');
+
+            let cuerpo = $('#cuerpo');
+            let btnGris = document.querySelector('#btn-gris');
+            let btnVerde = document.querySelector('#btn-verde');
+            let btnBlue = document.querySelector('#btn-azul');
+            let btnRojo = document.querySelector('#btn-rojo');
+            let btnAmarillo = document.querySelector('#btn-amarillo');
+            let btnAzul2 = document.querySelector('#btn-azul2');
+            let btnClaro = document.querySelector('#btn-claro');
+            let btnOscuro = document.querySelector('#btn-oscuro');
+
+            btnBlue.addEventListener('click', function () {
+                muestra.colorDeFondo('bg-primary');
+            });
+
+            btnGris.addEventListener('click', function () {
+                muestra.colorDeFondo('bg-secondary');
+            });
+
+            btnVerde.addEventListener('click', function () {
+                muestra.colorDeFondo('bg-success');
+            });
+
+            btnRojo.addEventListener('click', function () {
+                muestra.colorDeFondo('bg-danger');
+            });
+
+            btnAmarillo.addEventListener('click', function () {
+                muestra.colorDeFondo('bg-warning');
+            });
+
+            btnAzul2.addEventListener('click', function () {
+                muestra.colorDeFondo('bg-info');
+            });
+
+            btnClaro.addEventListener('click', function () {
+                muestra.colorDeFondo('bg-light');
+            });
+
+            btnOscuro.addEventListener('click', function () {
+                muestra.colorDeFondo('bg-dark');
+            });
+        });
+    </script>
+</body>
+
+</html>
