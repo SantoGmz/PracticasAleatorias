@@ -1,89 +1,82 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Hello, world!</title>
-  </head>
-  <body>
-      <!-- As a link -->
-      <nav class="navbar navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Navbar</a>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" id="crearAlerta" >
-                    <div class="alert alert-success" role="alert">
-                        A simple success alert—check it out!
-                      </div>
-                      <div class="alert alert-danger" role="alert">
-                        A simple danger alert—check it out!
-                      </div>
-                </div>
-            </div>
+</head>
 
-        </div>
+<body>
+    <!-- As a link -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">S O T N A S</a>
+    </nav>
+
+
     <div class="container">
         <div class="row">
+            <div class="col-md-12" id="crearAlerta">
+                <!--Aqui vienen las alertas-->
+
+              
+            </div>
+        </div>
+
+    </div>
+    <div class="container mt-5 ">
+        <div class="row">
             <div class="col-md-4">
-        <form action="#" method="post" id="formulario">
+                <form action="#" method="post" id="formulario">
 
-                <input type="text" class="form-control mt-3" placeholder="Nombre" id="nombre">
-                <input type="text" class="form-control mt-3" placeholder="Apellido" id="apellido">
-                <input type="date" class="form-control mt-3" id="fecha">
-                
-                <select class="custom-select mt-3" id="sexo">
-                    <option value="" disabled selected>Selecciona tu Sexo</option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
-                    <option value="Desconocido">Prefiero no decirlo</option>
-                </select>
-                
-                <button type="button" id="btn-Enviar" class="btn btn-primary mt-3">Agregar</button>
+                    <input type="text" class="form-control mt-3" placeholder="Nombre" id="nombre">
+                    <input type="text" class="form-control mt-3" placeholder="Apellido" id="apellido">
+                    <input type="date" class="form-control mt-3" id="fecha">
+
+                    <select class="custom-select mt-3" id="sexo">
+                        <option value="" disabled selected>Selecciona tu Sexo</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="Desconocido">Prefiero no decirlo</option>
+                    </select>
+
+                    <button type="button" id="btn-Enviar" class="btn btn-dark mt-3">Agregar</button>
                 </form>
-                
-
 
             </div>
 
+            <div class="col-md-8 mt-3" id="contenido">
+                <!--Aqui se estara agregando el contenido en la pagina-->
 
 
-
-
-            <div class="col-md-8" id="contenido">
-
-                <div class="accordion mt-3">
-                    <div class="card">
-                      <div class="card-header" id="headingOne">
-                        
-                        <strong>Nombre:</strong> <span id="impNnombre" >Santos</span>, 
-                        
-                         <strong>Apellido:</strong> <span id="ipmApellido" >Severino</span>,
-
-                         <strong>Fecha de Nacimiento:</strong> <span id="ipmFecha" >11/09/1999</span>, 
-
-                         <strong>Sexo:</strong> <span id="ipmSexo" >Masculino</span>
-                       
-                      </div>
 
             </div>
         </div>
     </div>
+    </div>
 
 
-   
+
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <script src="app.js"></script>
 </body>
+
 </html>

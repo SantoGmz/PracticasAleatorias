@@ -13,44 +13,68 @@ class VisualisacionesDelUsuario{
     notificacion(mesaje,clase){
         this.mesaje = mesaje;
         this.clase = clase;
-/*
         let elHTML= document.querySelector("#crearAlerta");    
         let creandoParrafo = document.createElement("div");
 
         creandoParrafo.setAttribute("class", clase);
+
         creandoParrafo.setAttribute("role", "alert");
         let contenido = document.createTextNode(mesaje);
         creandoParrafo.appendChild(contenido);
         elHTML.appendChild(creandoParrafo);
-               */
+               
+
+        setTimeout(()=>{
+        $('.alert').hide('slow');
+
+        },3000)
+
+
+
+
+
     }
 
     crearTarjeta(nombre, apellido, fechaNacimiento, sexo){
-        let mensaje = `        
-        <div class="card">
-            <div class="card-header" id="headingOne">
-            
-            <strong>Nombre:</strong> <span id="impNnombre" >Santos</span>, 
-            
-            <strong>Apellido:</strong> <span id="ipmApellido" >Severino</span>,
+        let notificaciones = new VisualisacionesDelUsuario();
+        if (nombre== "" || apellido == "" || fechaNacimiento == "" || sexo == "") {
+            notificaciones.notificacion("Algo ha ocurrido, intenta nueva mente.","alert alert-danger position-absolute mt-1 btn-block");
 
-            <strong>Fecha de Nacimiento:</strong> <span id="ipmFecha" >11/09/1999</span>, 
-
-            <strong>Sexo:</strong> <span id="ipmSexo" >Masculino</span>
             
+        } else {
+        
+            let mensaje = `        
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                
+                <strong>Nombre:</strong> <span id="impNnombre" >${nombre}</span>, 
+                
+                <strong>Apellido:</strong> <span id="ipmApellido" >${apellido}</span>,
+    
+                <strong>Fecha de Nacimiento:</strong> <span id="ipmFecha" >${fechaNacimiento}</span>, 
+    
+                <strong>Sexo:</strong> <span id="ipmSexo" >${sexo}</span>
+                
+                </div>
+    
             </div>
+            `
+            
+            let elHTML = document.querySelector("#contenido");
+            let creandoTarjeta =document.createElement("div");
+            
+            creandoTarjeta.setAttribute("class", "accordion mb-3");
+       
+            
+            creandoTarjeta.innerHTML=mensaje;
+            elHTML.appendChild(creandoTarjeta);
 
-        </div>
-        `
-        
-        let elHTML = document.querySelector("#contenido");
-        let creandoTarjeta =document.createElement("div");
-        
-        creandoTarjeta.setAttribute("class", "accordion mt-3");
-        let creandoCont = document.createTextNode(mensaje);
-        
-        creandoTarjeta.appendChild(creandoCont);
-        elHTML.appendChild(creandoTarjeta);
+        notificaciones.notificacion("Agregado correctamente","alert alert-success mt-1 position-absolute btn-block");
+
+        document.getElementById('formulario').reset();
+
+    
+        }
 
 
 
@@ -74,9 +98,10 @@ botonEnviar.addEventListener('click', function(){
 
     let notificaciones = new VisualisacionesDelUsuario();
 
-    notificaciones.crearTarjeta(datos.nombre);
+    notificaciones.crearTarjeta(datos.nombre, datos.apellido, datos.fechaNacimiento, datos.sexo);
+   
 
-    notificaciones.notificacion("hola","alert alert-success");
+
 
 
 
