@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+}
+
+  .pin-top {
+    position: relative;
+  }
+
+
+  .pin-bottom {
+    position: relative;
+  }
+
+ 
+  .pinned {
+    position: fixed !important;
+  }
+  
+  .block {
+      height: 100%;
+  }
+  
+  .divider {
+      height: 50px;
+  }
