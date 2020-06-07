@@ -23,3 +23,12 @@ html, body {
   .divider {
       height: 50px;
   }
+
+  .divider2 {
+    
+    border-top: solid 1px black;
+}
+
+nav{
+  z-index: 3;
+}
